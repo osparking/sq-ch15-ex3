@@ -16,7 +16,7 @@ public interface AccountRepository extends CrudRepository<Account, Long>{
 	public Optional<Account> findAccountById(Long id);
 	
 	// 계좌 목록 읽는 메소드
-	@Query("select * from account where id=:id")
+	@Query("select * from account")
 	public List<Account> findAccounts();
 	
 	// 계좌 금액 갱신 메소드
